@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LyriCurious | Retro Lyrics Finder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <section class="player-panel" aria-labelledby="appTitle">
+      <div class="panel-top">
+        <div class="hero-copy">
+          <div class="badge">LyriCurious</div>
+          <h1 id="appTitle">Spin up the lyrics.</h1>
+          <p>A little crate-digging lyric desk for finding verses, choruses, and late-night singalong receipts.</p>
+        </div>
+
+        <div class="record-stage" aria-hidden="true">
+          <div class="record">
+            <span class="record-label">LC</span>
+          </div>
+        </div>
+      </div>
+
+      <form id="lyricsForm" class="form-grid">
+        <label>
+          Artist
+          <input type="text" id="artistInput" placeholder="Adele" required />
+        </label>
+        <label>
+          Title
+          <input type="text" id="titleInput" placeholder="Hello" required />
+        </label>
+        <button type="submit">Fetch Lyrics</button>
+      </form>
+    </section>
+
+    <section class="output-panel" aria-label="Lyrics output">
+      <div class="output-header">
+        <span>Now Reading</span>
+        <span class="signal">Lyrics</span>
+      </div>
+      <div id="status" class="status" aria-live="polite">Ready for a track.</div>
+      <pre id="lyricsOutput" class="lyrics"></pre>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

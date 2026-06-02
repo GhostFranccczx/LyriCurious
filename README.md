@@ -1,2 +1,9 @@
 # LyriCurious
-A lightweight retro-themed lyrics web app that lets users search and view song lyrics instantly. Using the Lyrics.ovh API, it fetches lyrics in real time based on the artist and song title entered by the user. Features a simple, responsive, and nostalgic vintage-inspired interface.
+
+A lightweight retro-themed lyrics web app that fetches song lyrics using the `https://api.lyrics.ovh/v1/artist/title` API.
+
+## Usage
+
+- Open `index.html` in a browser.
+- Enter an artist and song title.
+- Click `Fetch Lyrics` to see the lyrics load in the retro-style output area.
