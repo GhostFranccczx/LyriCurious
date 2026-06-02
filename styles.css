@@ -219,6 +219,42 @@ input:focus {
   border-color: var(--coral-dark);
 }
 
+.autocomplete {
+  position: relative;
+}
+
+.suggestions {
+  position: absolute;
+  z-index: 20;
+  width: 100%;
+  bottom: calc(100% + 0.35rem);
+  left: 0;
+  padding: 0.2rem 0;
+  list-style: none;
+  border: 2px solid var(--ink);
+  border-radius: 8px 8px 0 0;
+  background: var(--cream);
+  box-shadow: 0 10px 24px rgba(43, 37, 32, 0.16);
+  max-height: 240px;
+  overflow: auto;
+}
+
+.suggestion-item {
+  padding: 0.8rem 0.95rem;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.suggestion-item:hover,
+.suggestion-item[aria-selected="true"] {
+  background: var(--mustard);
+  color: var(--ink);
+}
+
+.autocomplete-field {
+  position: relative;
+}
+
 button {
   min-height: 54px;
   border: 2px solid var(--ink);
