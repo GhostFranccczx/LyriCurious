@@ -27,14 +27,40 @@
       </div>
 
       <form id="lyricsForm" class="form-grid">
-        <label>
+        <label class="autocomplete-field">
           Artist
-          <input type="text" id="artistInput" placeholder="Adele" required />
+          <div class="autocomplete">
+            <input
+              type="text"
+              id="artistInput"
+              placeholder="Adele"
+              aria-autocomplete="list"
+              aria-controls="artistSuggestions"
+              aria-expanded="false"
+              autocomplete="off"
+              required
+            />
+            <ul id="artistSuggestions" class="suggestions" role="listbox" hidden></ul>
+          </div>
         </label>
-        <label>
+
+        <label class="autocomplete-field">
           Title
-          <input type="text" id="titleInput" placeholder="Hello" required />
+          <div class="autocomplete">
+            <input
+              type="text"
+              id="titleInput"
+              placeholder="Hello"
+              aria-autocomplete="list"
+              aria-controls="titleSuggestions"
+              aria-expanded="false"
+              autocomplete="off"
+              required
+            />
+            <ul id="titleSuggestions" class="suggestions" role="listbox" hidden></ul>
+          </div>
         </label>
+
         <button type="submit">Fetch Lyrics</button>
       </form>
     </section>
